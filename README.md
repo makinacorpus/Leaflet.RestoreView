@@ -12,5 +12,4 @@ Usage
     if (!map.restoreView()) {
         map.fitWorld();
     }
-}
 ```
