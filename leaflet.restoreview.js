@@ -3,15 +3,15 @@ var RestoreViewMixin = {
         var storage = window.localStorage || {};
         if (!this.__initRestore) {
             this.on('moveend', function (e) {
-              if (!this._loaded)
-                 return;  // Never access map bounds if view is not set.
+                if (!this._loaded)
+                    return;  // Never access map bounds if view is not set.
 
-              var view = {
-                lat: this.getCenter().lat,
-                lng: this.getCenter().lng,
-                zoom: this.getZoom()
-              };
-              storage['mapView'] = JSON.stringify(view);
+                var view = {
+                    lat: this.getCenter().lat,
+                    lng: this.getCenter().lng,
+                    zoom: this.getZoom()
+                };
+                storage['mapView'] = JSON.stringify(view);
             }, this);
             this.__initRestore = true;
         }
