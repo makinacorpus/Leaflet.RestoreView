@@ -10,6 +10,6 @@ Usage
 
 ```
     if (!map.restoreView()) {
-        map.fitWorld();
+        map.setView([50.5, 30.51], 15);
     }
 ```
