@@ -13,3 +13,8 @@ Usage
         map.setView([50.5, 30.51], 15);
     }
 ```
+
+Authors
+-------
+
+[![Makina Corpus](http://depot.makina-corpus.org/public/logo.gif)](http://makinacorpus.com)
