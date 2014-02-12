@@ -25,7 +25,7 @@ var RestoreViewMixin = {
         catch (err) {
             return false;
         }
-    },
+    }
 };
 
 L.Map.include(RestoreViewMixin);
