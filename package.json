@@ -1,0 +1,22 @@
+{
+  "name": "leaflet.restoreview",
+  "version": "0.0.1",
+  "description": "Save and restore view from localStorage",
+  "main": "leaflet.restoreview.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makinacorpus/Leaflet.RestoreView"
+  },
+  "keywords": [
+    "leaflet"
+  ],
+  "author": "Makina Corpus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/makinacorpus/Leaflet.RestoreView/issues"
+  },
+  "homepage": "http://makinacorpus.github.io/Leaflet.RestoreView/"
+}
