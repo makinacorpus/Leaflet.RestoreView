@@ -41,7 +41,7 @@
             return true;
         }
         catch(e) {
-            console.warn("Your browser block access to " + type);
+            console.warn("Your browser blocks access to " + type);
             return false;
         }
     }
