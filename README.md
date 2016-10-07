@@ -7,6 +7,8 @@ First call on ``restoreView()`` will setup event listening and view save.
 
 Check out [demo](http://makinacorpus.github.io/Leaflet.RestoreView/).
 
+*Note: This plugin uses localStorage to store data, if your browser denies storing local data, this will not work.*
+
 Usage
 -----
 
