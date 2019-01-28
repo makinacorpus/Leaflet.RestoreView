@@ -1,6 +1,6 @@
 {
   "name": "leaflet.restoreview",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Save and restore view from localStorage",
   "main": "leaflet.restoreview.js",
   "scripts": {
