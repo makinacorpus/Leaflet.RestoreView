@@ -12,7 +12,6 @@ First call on ``restoreView()`` will setup event listening and view save.
 </p>
 
 <div class="demo">
-<p align="center"><img src="./screenshoot.png"></p>
 <p align="center"> Check out the <a href="https://makinacorpus.github.io/Leaflet.RestoreView/">demo</a> ! </p>
 </div>
 
