@@ -1,68 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Leaflet.RestoreView</title>
-
-  <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
-  <script type='text/javascript' src="leaflet.restoreview.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css">
-  <style type='text/css'>
-    #map {
-        position: absolute;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom:0;
-    }
-    .help {
-        font-size: 1.5em;
-        position: absolute;
-        top:0;
-        left: 0;
-        right: 0;
-        height: 30px;
-        z-index: 10;
-        background-color: rgba(0,0,0,0.5);
-        color: white;
-        padding: 10px;
-        margin: 0px;
-        text-align: center;
-    }
-    .help a.sources {
-        float: left;
-        margin-left: 50px;
-        color: white;
-    }
-    .help a.logo {
-        float: right;
-    }
-    .help a.logo img {
-        height: 30px;
-    }
-  </style>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+    <link rel="stylesheet" href="docs/style.css">
 </head>
+
 <body>
-  <p class="help">Move to some place, and <a href="">refresh page</a> !
-    <a class="sources" href="http://github.com/makinacorpus/Leaflet.RestoreView/">Sources</a>
-    <a class="logo" href="http://makina-corpus.com"><img src="http://depot.makina-corpus.org/public/logo.gif"/></a>
-  </p>
-  <div id="map"></div>
+    <header>
+        <h1 class="demo-name"></h1>
+        <div class="menu">
+            <a class="npm"><img class="icon" src="docs/logo/npm.svg" />
+                <div class="title"></div>
+            </a>
+            <a class="sources"><img class="icon" src="docs/logo/github.svg" />
+                <div class="title">Github</div>
+            </a>
+            <a class="logo" href="http://makina-corpus.com"><img class="logo" src="docs/logo/makina.svg"
+                    alt="Makina Corpus logo" /></a>
+            <button class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <iframe id="demoIframe" title="Demo Iframe" width="100%" height="100%" src="docs/example.html">
+        </iframe>
+        <aside class="side closed">
+            <zero-md>
+                <!-- Set `data-dedent` to remove indentation -->
+                <script class= "moreInfo" type="text/markdown" data-dedent>
+                </script>
+                <template>
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css" />
+                </template>
+            </zero-md>
+            <h1>Description</h1>
+            <zero-md class="readme-md">
+                <template>
+                    <style>
+                        h1 {
+                            display: none;
+                        }
 
-  <script type='text/javascript'>
-    window.onload = function () {
+                        h2,
+                        h3 {
+                            margin-top: 10px !important;
+                            padding: 0.7px !important;
+                            margin-left: 5px !important;
+                            line-height: 1.2 !important;
+                        }
 
-      var map = L.map('map');
+                        p {
+                            margin-left: 4px !important;
+                        }
 
-      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
-
-      if (!map.restoreView()) {
-          map.setView([48.49, 1.395], 16);
-      }
-    };
-  </script>
+                        .demo {
+                            display: none;
+                        }
+                    </style>
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css" />
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-dracula.min.css" />
+                </template>
+            </zero-md>
+        </aside>
+    </main>
 </body>
+<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+<script>
+    function toggleMenu() {
+        var toggle = document.querySelector('.menu-toggle');
+        var menu = document.querySelector('.side');
+        toggle.classList.toggle('close');
+        menu.classList.toggle('closed');
+    }
+
+    function initMenu() {
+        var toggle = document.querySelector('.menu-toggle');
+        toggle.addEventListener('click', toggleMenu);
+    }
+
+    window.addEventListener('load', function () {
+        initMenu();
+    });
+</script>
+<script src="docs/meta.js"></script>
+
 </html>
