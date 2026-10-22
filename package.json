@@ -1,5 +1,5 @@
 {
-  "name": "leaflet.restoreview",
+  "name": "@makina-corpus/leaflet.restoreview",
   "version": "1.1.0",
   "description": "Save and restore view from localStorage",
   "main": "leaflet.restoreview.js",
@@ -21,5 +21,8 @@
   "homepage": "http://makinacorpus.github.io/Leaflet.RestoreView/",
   "peerDependencies": {
     "leaflet": ">=0.7 <2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

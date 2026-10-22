@@ -6,8 +6,8 @@ Stores and restores map view using localStorage.
 First call on ``restoreView()`` will setup event listening and view save.
 
 <p  align="center">
-<a href="https://www.npmjs.com/package/leaflet.restoreview"><img alt="npm" src="https://img.shields.io/npm/dt/leaflet.restoreview"></a>
-<a href="https://www.npmjs.com/package/leaflet.restoreview"><img alt="npm" src="https://img.shields.io/npm/v/leaflet.restoreview?color=red">
+<a href="https://www.npmjs.com/package/@makina-corpus/leaflet.restoreview"><img alt="npm" src="https://img.shields.io/npm/dt/%40makina-corpus%2Fleaflet.restoreview"></a>
+<a href="https://www.npmjs.com/package/@makina-corpus/leaflet.restoreview"><img alt="npm" src="https://img.shields.io/npm/v/%40makina-corpus%2Fleaflet.restoreview?color=red">
 </a>
 </p>
 
@@ -20,7 +20,7 @@ First call on ``restoreView()`` will setup event listening and view save.
 Install
 -----
 install it via your favorite package manager:
-* `npm i leaflet.restoreview`
+* `npm i @makina-corpus/leaflet.restoreview`
 
 
 Usage
@@ -43,6 +43,7 @@ Changelog
 
 ### 1.1.0
 
+* Publish on npm as `@makina-corpus/leaflet.restoreview`
 * Add `restoreView('session')` to keep the view in sessionStorage (#7)
 * Declare Leaflet as a peer dependency (`leaflet >=0.7 <2`)
 
