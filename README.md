@@ -32,6 +32,12 @@ Usage
     }
 ```
 
+To keep the view for the current browser tab only, store it in sessionStorage:
+
+```
+    map.restoreView('session');
+```
+
 Authors
 -------
 
