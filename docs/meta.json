@@ -1,5 +1,5 @@
 {
     "name" : "Leaflet.RestoreView",
     "github" : "https://github.com/makinacorpus/Leaflet.RestoreView/",
-    "npm" : "@bagage/leaflet.restoreview"
+    "npm" : "leaflet.restoreview"
 }
