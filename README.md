@@ -38,6 +38,18 @@ To keep the view for the current browser tab only, store it in sessionStorage:
     map.restoreView('session');
 ```
 
+Changelog
+---------
+
+### 1.1.0
+
+* Add `restoreView('session')` to keep the view in sessionStorage (#7)
+* Declare Leaflet as a peer dependency (`leaflet >=0.7 <2`)
+
+### 1.0.0
+
+* Initial version
+
 Authors
 -------
 
