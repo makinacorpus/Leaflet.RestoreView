@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/makinacorpus/Leaflet.RestoreView/issues"
   },
-  "homepage": "http://makinacorpus.github.io/Leaflet.RestoreView/"
+  "homepage": "http://makinacorpus.github.io/Leaflet.RestoreView/",
+  "peerDependencies": {
+    "leaflet": ">=0.7 <2"
+  }
 }
