@@ -1,10 +1,10 @@
 (function() {
     var RestoreViewMixin = {
-        restoreView: function () {
-            if (!storageAvailable('localStorage')) {
+        restoreView: function (type) {
+            var storage = getStorage(type);
+            if (!storage) {
                 return false;
             }
-            var storage = window.localStorage;
             if (!this.__initRestore) {
                 this.on('moveend', function (e) {
                     if (!this._loaded)
@@ -32,7 +32,22 @@
         }
     };
 
-    function storageAvailable(type) {
+    function getStorage(type) {
+        var t = 'localStorage';
+        var storage = null;
+
+        if (type && type === 'session') {
+            t = 'sessionStorage';
+        }
+
+        if (webStorageAvailable(t)) {
+            storage = window[t];
+        }
+
+        return storage;
+    }
+
+    function webStorageAvailable(type) {
         try {
             var storage = window[type],
                 x = '__storage_test__';
